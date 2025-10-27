@@ -46,7 +46,11 @@ def query_data(table: str, column: str) -> list[tuple]:
 
         res = con.execute(
             f"""
-            SELECT {column}, COUNT({column}) AS N FROM {table} GROUP BY {column};
+            SELECT {column},
+            COUNT({column}) AS N,
+            round(100 * N/SUM(N) OVER (), 1) AS '%'
+            FROM {table}
+            GROUP BY {column};
             """
         ).fetchall()
 

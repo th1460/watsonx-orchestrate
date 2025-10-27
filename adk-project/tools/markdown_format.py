@@ -13,4 +13,4 @@ def markdown_format(df: list[tuple]) -> str:
         str: Query results in markdown format.
     """
 
-    return DataFrame(df, columns=["Variable", "N"]).to_markdown(index=False)
+    return DataFrame(df, columns=["Variable", "N", "%"]).to_markdown(index=False)

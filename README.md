@@ -15,6 +15,15 @@ orchestrate env activate my-orchestrate --api-key $WOX_API_KEY
 # Starting your ADK project
 mkdir -p adk-project/{agents,tools,knowledge}
 
+adk-project
+├── agents
+│   └── query_agent.py
+├── knowledge
+└── tools
+    ├── markdown_format.py
+    ├── query_data_flow.py
+    └── query_data.py
+
 # Set connection
 orchestrate connections add -a cos_connection
 orchestrate connections configure -a cos_connection --env live --kind key_value --type team
