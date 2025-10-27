@@ -3,6 +3,9 @@
 ## Setup
 
 ```bash
+# Read environment variables
+source .env
+
 # Adding an environment
 orchestrate env add --name my-orchestrate --url $WOX_URL --type ibm_iam
 
