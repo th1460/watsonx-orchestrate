@@ -14,13 +14,16 @@ APP_ID = "cos_connection"
           )])
 def query_data(table: str, column: str) -> list[tuple]:
     """Executes the tool's action based on the provided input.
+    Always see the knowledge database to get the correct column,
+    that is more similar with the description=.
+    The correct column is prefixed with column= in the knowledge database.
 
     Args:
         table (str): Table.
         column (str): Column.
 
     Returns:
-        list[tuple]: Query results
+        list[tuple]: Resulted this tool execution
     """
 
     creds = connections.key_value(APP_ID)

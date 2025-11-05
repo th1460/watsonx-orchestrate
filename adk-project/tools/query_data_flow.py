@@ -27,6 +27,9 @@ def query_data_flow(aflow: Flow = None) -> Flow:
     """
     Creates a flow with two tools: query_data and markdown_format.
     This flow will rely on the Flow engine to perform automatic data mapping at runtime.
+    Always see the knowledge database to get the correct column.
+    The correct column is prefixed with column='correct column name', always use the 'correct column name',
+    get the correct column name more similar to the description. Examples: 'query column from table'
     Args:
         flow (Flow, optional): The flow to be built. Defaults to None.
     Returns:

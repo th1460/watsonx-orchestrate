@@ -32,12 +32,13 @@ adk-project
 ├── agents
 │   └── query_agent.py
 ├── knowledge
+│   ├── database_knowledge.py
+│   └── database_knowledge.txt
 └── tools
     ├── generate_report.py
     ├── markdown_format.py
     ├── query_data_flow.py
-    ├── query_data.py
-    └── upload_cos
+    └── query_data.py
 
 # Set connection
 orchestrate connections add -a cos_connection
@@ -69,6 +70,10 @@ orchestrate tools import -k python -p adk-project/tools -f adk-project/tools/gen
 
 # Create flow
 orchestrate tools import -k flow -p adk-project/tools/ -f adk-project/tools/query_data_flow.py
+
+# Create knowledge
+orchestrate knowledge-bases import -f adk-project/knowledge/database_knowledge.py 
+orchestrate knowledge-bases status -n database_knowledge
 
 # Create agent
 orchestrate agents import -f adk-project/agents/query_agent.py

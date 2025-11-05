@@ -1,0 +1,5 @@
+Informations about the titanic table with the columns= and description=. The columns could be called variables too.
+
+- column=Survived: description=The target variable, indicating survival status (No, Yes).
+- column=Pclass: description=The passenger's ticket class (1st, 2nd, 3rd), serving as a proxy for socio-economic status.
+- column=Sex: description=The gender of the passenger (male, female).
