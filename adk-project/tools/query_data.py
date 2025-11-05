@@ -33,8 +33,8 @@ def query_data(table: str, column: str) -> list[tuple]:
             LOAD httpfs;
             CREATE SECRET (
             TYPE S3,
-            KEY_ID '{creds.get("S3_ACCESS_KEY_ID")}',
-            SECRET '{creds.get("S3_SECRET_ACCESS_KEY")}',
+            KEY_ID '{creds.get("S3_ACCESS_KEY_ID_READ")}',
+            SECRET '{creds.get("S3_SECRET_ACCESS_KEY_READ")}',
             REGION '{creds.get("S3_REGION")}',
             ENDPOINT '{creds.get("S3_ENDPOINT")}'
             );
