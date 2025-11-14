@@ -13,6 +13,14 @@ S3_ACCESS_KEY_ID=<access_key_id>
 S3_SECRET_ACCESS_KEY=<secret_access_key>
 ```
 
+### Install ADK
+
+```bash
+virtualenv venv
+source venv/bin/activate
+pip install ibm-watsonx-orchestrate
+```
+
 ### Running in the Cloud
 
 ```bash
@@ -61,7 +69,6 @@ orchestrate connections set-credentials -a cos_connection -k key_value --env liv
 -e S3_SECRET_ACCESS_KEY_WRITE=$S3_SECRET_ACCESS_KEY_WRITE
 
 # Create tools
-virtualenv venv
 source venv/bin/activate
 pip install -r requirements.txt
 orchestrate tools import -k python -f adk-project/tools/query_data.py -a cos_connection -r requirements.txt
@@ -109,3 +116,7 @@ orchestrate agents import -f adk-project/agents/cep_agent.py
 ```bash
 orchestrate server start -e .env --with-langflow
 ```
+
+## [Using agents in embedded webchat](https://developer.watson-orchestrate.ibm.com/manage/channels#embedded-chat-security)
+
+![](docs/embedded.png)
