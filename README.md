@@ -96,7 +96,7 @@ WO_INSTANCE=<service_instance_url>
 WO_API_KEY=<wxo_api_key>
 ```
 
-### Running the Local Environment
+### Running in the local environment
 
 ```bash
 orchestrate server start -e .env
