@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <script type="application/html-dependencies">ui-shell[1.0];themes[1.0];grid[1.0];plex[1.0]</script>
+    <script type="module" src="https://1.www.s81c.com/common/carbon/web-components/version/v2.11.1/ui-shell.min.js"></script>
+    <link href="https://1.www.s81c.com/common/carbon/web-components/version/v2.11.1/themes.css" rel="stylesheet"/>
+    <link href="https://1.www.s81c.com/common/carbon/web-components/version/v2.11.1/grid.css" rel="stylesheet"/>
+    <link href="https://1.www.s81c.com/common/carbon-for-ibm-dotcom/version/v2.11.1/plex.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <body class="cds-theme-zone-white"></body>
+    <cds-header aria-label="Titanic Report">
+      <cds-header-name href="" prefix="Titanic">Report</cds-header-name>
+    </cds-header>
+    <div class="cds--grid">
+      <div class="cds--row" style="margin-top:5rem">
+         <script>
+                window.wxOConfiguration = {
+                    orchestrationID: "8e04f9b997b34612a259dfb287636845_e487bf35-e702-4296-9226-22962ed8f706",
+                    hostURL: "https://us-south.watson-orchestrate.cloud.ibm.com",
+                    rootElementID: "root",
+                    showLauncher: true,
+                    crn: "crn:v1:bluemix:public:watsonx-orchestrate:us-south:a/8e04f9b997b34612a259dfb287636845:e487bf35-e702-4296-9226-22962ed8f706::",
+                    deploymentPlatform: "ibmcloud",
+                    chatOptions: {
+            agentId: "3653c27b-adf7-4b47-9a87-bbf6ea33cf42",
+            agentEnvironmentId: "403c1981-5fb8-4e51-b4a6-7abc8caf4155"
+        }
+                };
+
+                setTimeout(function () {
+                    const script = document.createElement('script');
+                    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+                    script.addEventListener('load', function () {
+                        wxoLoader.init();
+                    });
+                    document.head.appendChild(script);
+                }, 0);
+            </script>
+      </div>
+    </div>
+  </body>
+</html>
